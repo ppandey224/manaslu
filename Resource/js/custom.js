@@ -55,6 +55,8 @@ function validateUser(){
             alert("Error");
         }
     });
+
+
 return false
 
 }
