@@ -21,11 +21,11 @@ $items = $itemService->getList(1, 2, "Biratnagar");
             for($i = 0; $i < sizeof($items); $i++){
         ?>
                 <tr>
-                    <td><?php $items[$i]->getId(); ?></td>
-                    <td><?php $items[$i]->getTitle(); ?></td>
-                    <td><?php $items[$i]->getDetail(); ?></td>
-                    <td><?php $items[$i]->getDate(); ?></td>
-                    <td><?php $items[$i]->getLocation(); ?></td>
+                    <td><?php $items[$i]["Id"]; ?></td>
+                    <td><?php $items[$i]["Title"]; ?></td>
+                    <td><?php $items[$i]["Detail"]; ?></td>
+                    <td><?php $items[$i]["Date"]; ?></td>
+                    <td><?php $items[$i]["Location"]; ?></td>
                 </tr>
         <?php
 

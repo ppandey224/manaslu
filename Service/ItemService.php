@@ -28,9 +28,9 @@ class ItemService{
 
         while($row=mysqli_fetch_assoc($queryResult)){
 
-            $newItem = new Item($row["Id"], $row["Title"], $row["Detail"], $row["Date"], $row["Location"], null, null, null);
+            //$newItem = new Item($row["Id"], $row["Title"], $row["Detail"], $row["Date"], $row["Location"], null, null, null);
 
-            $itemList[]= $newItem;
+            $itemList[]= $row;
         }
 
         return $itemList;
