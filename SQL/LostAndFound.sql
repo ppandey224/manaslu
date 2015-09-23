@@ -28,10 +28,14 @@ SET time_zone = "+00:00";
 
 CREATE TABLE IF NOT EXISTS `Brand` (
   `Id` int(11) NOT NULL AUTO_INCREMENT,
-  `Name` int(25) NOT NULL,
+  `Name` VARCHAR(25) NOT NULL,
   `Sub_Id` int(5) NOT NULL,
   PRIMARY KEY (`Id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+INSERT INTO `Brand` (`Id`, `Name`, `Sub_Id`) VALUES
+(1, 'Nokia', 1),
+(2, 'Samsung', 1);
 
 -- --------------------------------------------------------
 
@@ -44,6 +48,10 @@ CREATE TABLE IF NOT EXISTS `Category` (
   `Name` varchar(40) NOT NULL,
   PRIMARY KEY (`Id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+INSERT INTO `Category` (`Id`, `Name`) VALUES
+(1, 'Electronics'),
+(2, 'HomeAppliance');
 
 -- --------------------------------------------------------
 
@@ -104,10 +112,16 @@ CREATE TABLE IF NOT EXISTS `Person` (
 
 CREATE TABLE IF NOT EXISTS `SubCategory` (
   `Id` int(11) NOT NULL AUTO_INCREMENT,
-  `Name` int(40) NOT NULL,
+  `Name` VARCHAR(40) NOT NULL,
   `Cat_Id` int(5) NOT NULL,
   PRIMARY KEY (`Id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+INSERT INTO `SubCategory` (`Id`, `Name`, `Cat_Id`) VALUES
+(1, 'Mobile', 1),
+(2, 'Tv', 1),
+(3, 'Washing Machine', 2),
+(4, 'Glass', 2);
 
 -- --------------------------------------------------------
 

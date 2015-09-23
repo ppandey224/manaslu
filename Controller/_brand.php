@@ -15,6 +15,7 @@ $brandList=$reportService->brandList($subCategoryId);
 if(sizeof($brandList)>0){
 
     ?>
+    <label for="BrandList"> Brand: </label>
     <select name="BrandList" id="brandList">
 
         <option value="Brand">Brand</option>
@@ -23,7 +24,7 @@ if(sizeof($brandList)>0){
 
             for($i=0;$i<sizeof($brandList);$i++){
 
-                echo '<option value='.$brandList[$i]["Brand_Id"].'>'.$brandList[$i]["Brand_Name"].'</option>';
+                echo '<option value='.$brandList[$i]["Id"].'>'.$brandList[$i]["Name"].'</option>';
             }
         }
         ?>
