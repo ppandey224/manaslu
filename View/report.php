@@ -34,6 +34,7 @@ $categoryList=$reportService->categoryList();
 <div id="subCategory">
 
 </div>
+
 <br>
 <div id="brandList">
 </div>

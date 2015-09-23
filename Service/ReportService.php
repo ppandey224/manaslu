@@ -66,6 +66,7 @@ class ReportService
 
     }
 
+
     public function insert( Category $category,Subcategory $subcategory, Brand $brand,Item $item)
     {
 
