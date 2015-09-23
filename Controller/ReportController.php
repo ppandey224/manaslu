@@ -14,9 +14,10 @@ $subcategory=new SubCategory($subcategory, "");
 $brandId=$_POST["BrandList"];
 $brand=new Brand($brandId,"");
 $location=$_POST["FoundLocation"];
+$date=$_POST["FoundDate"];
 $title=$_POST["ItemTitle"];
 $detail=$_POST["ItemDescription"];
-$item=new Item("", $title, $detail, "", $location,"" ,"", "" );
+$item=new Item("", $title, $detail, $date, $location,"" ,"", "" );
 
 
 $reportService->insert($category,$subcategory, $brand, $item);

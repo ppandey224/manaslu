@@ -41,6 +41,8 @@ $categoryList=$reportService->categoryList();
     <br>
     Found Location: <input type="text" name="FoundLocation">
     <br><br>
+    Found Date: <input type="date" name="FoundDate">
+    <br><br>
     Item Title: <input type="text" name="ItemTitle">
     <br><br>
     Item Detail: <textarea name="ItemDescription" rows="5" cols="40"></textarea>
