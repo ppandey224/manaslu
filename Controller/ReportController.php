@@ -23,5 +23,4 @@ $item=new Item("", $title, $detail, $date, $location,"" ,"", "" );
 
 $reportService->insert($category,$subcategory, $brand, $item);
 
-
 ?>

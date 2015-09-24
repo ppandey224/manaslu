@@ -52,7 +52,6 @@ $categoryList=$reportService->categoryList();
 
 </form>
 
-
 <br>
 </body>
 </html>

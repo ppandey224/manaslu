@@ -70,7 +70,6 @@ class ReportService
     public function insert( Category $category,Subcategory $subcategory, Brand $brand,Item $item)
     {
 
-
 //        $sql = "INSERT INTO item values (null, 'aalluu', 'asdfasd',true,true, '2015-10-10','asdfasf', 'asdfasd', 1, 1 ,1, 1)";
       $sql = "INSERT INTO item values (null, '".$item->getTitle()."','" .$item->getDetail()."',true,false, '".$item->getDate()."', '".$item->getLocation()."','asfasf',".$category->getId().",".$subcategory->getId().", 1 ,".$brand->getId().")";
 
