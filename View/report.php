@@ -39,6 +39,7 @@ $categoryList=$reportService->categoryList();
 <div id="brandList">
 </div>
 
+
     <br>
     Found Location: <input type="text" name="FoundLocation">
     <br><br>
@@ -49,6 +50,7 @@ $categoryList=$reportService->categoryList();
     Item Detail: <textarea name="ItemDescription" rows="5" cols="40"></textarea>
     <br><br>
     <input type="submit" value="submit" />
+
 
 </form>
 
