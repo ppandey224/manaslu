@@ -7,7 +7,6 @@
  */
 include "../CommonPage/includeAll.php";
 
-
 $category=$_POST["Category"];
 $category=new Category($category,"");
 $subcategory=$_POST["SubCategory"];

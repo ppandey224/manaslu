@@ -39,6 +39,7 @@ $categoryList=$reportService->categoryList();
 <div id="brandList">
 </div>
 
+
     <br>
     Found Location: <input type="text" name="FoundLocation">
     <br><br>
