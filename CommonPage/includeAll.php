@@ -18,6 +18,7 @@ include '../Service/ItemService.php';
 ?>
 <html>
 <head>
+    <link href="../Resource/css/main.css" rel="stylesheet">
     <script src="../Resource/js/jquery-1.8.0.min.js"></script>
     <script src="../Resource/js/custom.js"></script>
 </head>

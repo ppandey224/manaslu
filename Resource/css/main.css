@@ -1,3 +1,130 @@
-body {
-    padding-top: 90px;
+html, body {
+    margin: 0;
+    padding: 0;
+    font: 16px arial bold;
+    background: #fafafa;
+    font-family: arial;
+}
+#header {
+    background: #444;
+    padding: 10px;
+}
+#header h2 {
+    margin: 0;
+    color: red;
+}
+#wrapper {
+    width: 1200px;
+    height: auto;
+    margin: 0 auto;
+    padding: 20px;
+}
+div#firstColumnn {
+    display: inline-block;
+    width: 70%;
+    background-color: #fff;
+    padding: 20px;
+    border: 7px solid rgb(233, 226, 226);
+}
+#reportButtons {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+
+}
+div#lostButton {
+    display: inline-block;
+    width: 49%;
+    background-color: red;
+    color: #fff;
+    font-size: 22px;
+    text-align: center;
+    font-weight: bold;
+    font-family: arial;
+
+}
+div#foundButton {
+    display: inline-block;
+    width: 48%;
+    background-color: blue;
+    color: #fff;
+    font-size: 22px;
+    text-align: center;
+    font-weight: bold;
+    font-family: arial;
+    margin-left: 20px;
+
+}
+
+#secondBox {
+    padding: 10px 0px;
+    border-bottom: 1px solid #ddd;
+}
+
+#secondBox select {
+    width: 270px;
+    padding: 8px;
+    font-size: 14px
+}
+#secondBox input[type="text"] {
+    padding: 8px;
+    font-size: 14px;
+    width: 475px;
+}
+#secondBox input[type="button"] {
+    color: white;
+    background-color: red;
+    padding: 8px;
+    border: 0px;
+    width: 86px;
+    font-size: 17px;
+}
+div#infoCollection {
+    padding: 10px 0px;
+}
+.infoBox {
+    padding-bottom: 5px;
+    border-bottom: 1px solid #ddd;
+}
+.infoImg {
+    display: inline-block;
+}
+.infoDescription {
+    display: inline-block;
+}
+.infoDescription h4 {
+    margin: 0;
+    color: blue;
+    font-family: arial;
+}
+.infoDescription h4 span {
+    color: red;
+    border: 1px solid red;
+    padding: 2px;
+}
+div#secondColoumn {
+    display: inline-block;
+    height: auto;
+    width: 19%;
+    margin-left: 20px;
+    position: absolute;
+    border: 7px solid rgb(233, 226, 226);
+}
+#reportBox{
+    background: #fff;
+    margin-bottom: 20px;
+}
+#reportBox p {
+    margin: 0;
+    font-weight: bold;
+    text-align: center;
+}
+#reportBox h3{
+    margin: 0;
+    background-color: #5A4A55;
+    padding: 9px;
+    color: #fff;
+    text-align: center;
+}
+#reportInfo {
+    padding: 10px;
 }
