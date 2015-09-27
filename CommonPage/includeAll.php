@@ -14,6 +14,7 @@ include '../Model/Person.php';
 include '../Model/User.php';
 include '../Service/ReportService.php';
 include '../Service/UserService.php';
+include '../Service/ItemService.php';
 ?>
 <html>
 <head>
