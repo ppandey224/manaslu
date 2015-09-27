@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Sep 27, 2015 at 01:47 PM
+-- Generation Time: Sep 27, 2015 at 04:07 PM
 -- Server version: 5.5.44-0ubuntu0.14.04.1
 -- PHP Version: 5.5.9-1ubuntu4.11
 
@@ -37,7 +37,7 @@ CREATE TABLE IF NOT EXISTS `Brand` (
 --
 
 INSERT INTO `Brand` (`Id`, `Name`, `Sub_Id`) VALUES
-(2, 'Nokia', 2);
+  (2, 'Nokia', 2);
 
 -- --------------------------------------------------------
 
@@ -55,7 +55,7 @@ CREATE TABLE IF NOT EXISTS `Category` (
 --
 
 INSERT INTO `Category` (`Id`, `Name`) VALUES
-(1, 'Electronics');
+  (1, 'Electronics');
 
 -- --------------------------------------------------------
 
@@ -83,7 +83,7 @@ CREATE TABLE IF NOT EXISTS `Item` (
 --
 
 INSERT INTO `Item` (`Id`, `Title`, `Detail`, `Type`, `Status`, `Date`, `Location`, `PhotoUrl`, `Cat_Id`, `Sub_Id`, `P_Id`, `brand_id`) VALUES
-(1, 'Moto G', 'Black Moto G', '1', '0', '2015-09-21', 'Biratnagar', 'null', 1, 2, 1, NULL);
+  (1, 'Moto G', 'Black Moto G', '1', '0', '2015-09-21', 'Biratnagar', 'null', 1, 2, 1, NULL);
 
 -- --------------------------------------------------------
 
@@ -118,7 +118,7 @@ CREATE TABLE IF NOT EXISTS `Person` (
 --
 
 INSERT INTO `Person` (`Id`, `FirstName`, `MiddleName`, `LastName`, `Email`, `PhoneNumber`, `Type`) VALUES
-(1, 'Ashim', 'Sangram', 'Regmi', 'aregmee@gmail.com', 9842378755, '1');
+  (1, 'Ashim', 'Sangram', 'Regmi', 'aregmee@gmail.com', 9842378755, '1');
 
 -- --------------------------------------------------------
 
@@ -137,7 +137,7 @@ CREATE TABLE IF NOT EXISTS `SubCategory` (
 --
 
 INSERT INTO `SubCategory` (`Id`, `Name`, `Cat_Id`) VALUES
-(2, 'Mobile', 1);
+  (2, 'Mobile', 1);
 
 -- --------------------------------------------------------
 
@@ -161,51 +161,51 @@ CREATE TABLE IF NOT EXISTS `User` (
 -- Indexes for table `Brand`
 --
 ALTER TABLE `Brand`
-  ADD PRIMARY KEY (`Id`),
-  ADD KEY `Sub_Id` (`Sub_Id`);
+ADD PRIMARY KEY (`Id`),
+ADD KEY `Sub_Id` (`Sub_Id`);
 
 --
 -- Indexes for table `Category`
 --
 ALTER TABLE `Category`
-  ADD PRIMARY KEY (`Id`);
+ADD PRIMARY KEY (`Id`);
 
 --
 -- Indexes for table `Item`
 --
 ALTER TABLE `Item`
-  ADD PRIMARY KEY (`Id`),
-  ADD KEY `Cat_Id` (`Cat_Id`),
-  ADD KEY `Sub_Id` (`Sub_Id`),
-  ADD KEY `P_Id` (`P_Id`),
-  ADD KEY `brand_id` (`brand_id`);
+ADD PRIMARY KEY (`Id`),
+ADD KEY `Cat_Id` (`Cat_Id`),
+ADD KEY `Sub_Id` (`Sub_Id`),
+ADD KEY `P_Id` (`P_Id`),
+ADD KEY `brand_id` (`brand_id`);
 
 --
 -- Indexes for table `Login`
 --
 ALTER TABLE `Login`
-  ADD PRIMARY KEY (`Id`),
-  ADD KEY `UserId` (`UserId`),
-  ADD KEY `PersonId` (`PersonId`);
+ADD PRIMARY KEY (`Id`),
+ADD KEY `UserId` (`UserId`),
+ADD KEY `PersonId` (`PersonId`);
 
 --
 -- Indexes for table `Person`
 --
 ALTER TABLE `Person`
-  ADD PRIMARY KEY (`Id`);
+ADD PRIMARY KEY (`Id`);
 
 --
 -- Indexes for table `SubCategory`
 --
 ALTER TABLE `SubCategory`
-  ADD PRIMARY KEY (`Id`),
-  ADD KEY `Cat_Id` (`Cat_Id`);
+ADD PRIMARY KEY (`Id`),
+ADD KEY `Cat_Id` (`Cat_Id`);
 
 --
 -- Indexes for table `User`
 --
 ALTER TABLE `User`
-  ADD PRIMARY KEY (`Id`);
+ADD PRIMARY KEY (`Id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -215,37 +215,37 @@ ALTER TABLE `User`
 -- AUTO_INCREMENT for table `Brand`
 --
 ALTER TABLE `Brand`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `Category`
 --
 ALTER TABLE `Category`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `Item`
 --
 ALTER TABLE `Item`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `Login`
 --
 ALTER TABLE `Login`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT;
+MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `Person`
 --
 ALTER TABLE `Person`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `SubCategory`
 --
 ALTER TABLE `SubCategory`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `User`
 --
 ALTER TABLE `User`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT;
+MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- Constraints for dumped tables
 --
@@ -254,29 +254,29 @@ ALTER TABLE `User`
 -- Constraints for table `Brand`
 --
 ALTER TABLE `Brand`
-  ADD CONSTRAINT `Brand_ibfk_1` FOREIGN KEY (`Sub_Id`) REFERENCES `SubCategory` (`Id`);
+ADD CONSTRAINT `Brand_ibfk_1` FOREIGN KEY (`Sub_Id`) REFERENCES `SubCategory` (`Id`);
 
 --
 -- Constraints for table `Item`
 --
 ALTER TABLE `Item`
-  ADD CONSTRAINT `Item_ibfk_1` FOREIGN KEY (`Cat_Id`) REFERENCES `Category` (`Id`),
-  ADD CONSTRAINT `Item_ibfk_2` FOREIGN KEY (`Sub_Id`) REFERENCES `SubCategory` (`Id`),
-  ADD CONSTRAINT `Item_ibfk_3` FOREIGN KEY (`P_Id`) REFERENCES `Person` (`Id`),
-  ADD CONSTRAINT `Item_ibfk_4` FOREIGN KEY (`brand_id`) REFERENCES `Brand` (`Id`);
+ADD CONSTRAINT `Item_ibfk_1` FOREIGN KEY (`Cat_Id`) REFERENCES `Category` (`Id`),
+ADD CONSTRAINT `Item_ibfk_2` FOREIGN KEY (`Sub_Id`) REFERENCES `SubCategory` (`Id`),
+ADD CONSTRAINT `Item_ibfk_3` FOREIGN KEY (`P_Id`) REFERENCES `Person` (`Id`),
+ADD CONSTRAINT `Item_ibfk_4` FOREIGN KEY (`brand_id`) REFERENCES `Brand` (`Id`);
 
 --
 -- Constraints for table `Login`
 --
 ALTER TABLE `Login`
-  ADD CONSTRAINT `Login_ibfk_1` FOREIGN KEY (`UserId`) REFERENCES `User` (`Id`),
-  ADD CONSTRAINT `Login_ibfk_2` FOREIGN KEY (`PersonId`) REFERENCES `Person` (`Id`);
+ADD CONSTRAINT `Login_ibfk_1` FOREIGN KEY (`UserId`) REFERENCES `User` (`Id`),
+ADD CONSTRAINT `Login_ibfk_2` FOREIGN KEY (`PersonId`) REFERENCES `Person` (`Id`);
 
 --
 -- Constraints for table `SubCategory`
 --
 ALTER TABLE `SubCategory`
-  ADD CONSTRAINT `SubCategory_ibfk_1` FOREIGN KEY (`Cat_Id`) REFERENCES `Category` (`Id`);
+ADD CONSTRAINT `SubCategory_ibfk_1` FOREIGN KEY (`Cat_Id`) REFERENCES `Category` (`Id`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
