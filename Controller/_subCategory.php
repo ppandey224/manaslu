@@ -14,6 +14,7 @@ $subCategoryList=$reportService->subCategoryList($categoryId);
 
 if(sizeof($subCategoryList)>0){
     ?>
+    <label for="SubCategory"> SubCategory: </label>
     <select name="SubCategory" id="subCategoryList" onchange=" return brandList()">
 
         <option value="subCategory">Sub Category</option>
@@ -21,7 +22,7 @@ if(sizeof($subCategoryList)>0){
 
         for($i=0;$i<sizeof($subCategoryList);$i++){
 
-            echo '<option value='.$subCategoryList[$i]["Subcategory_Id"].'>'.$subCategoryList[$i]["Subcategory_Name"].'</option>';
+            echo '<option value='.$subCategoryList[$i]["Id"].'>'.$subCategoryList[$i]["Name"].'</option>';
 
         }
         ?>

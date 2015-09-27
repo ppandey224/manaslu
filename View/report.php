@@ -19,12 +19,13 @@ $categoryList=$reportService->categoryList();
 
 <body>
 
-
+<form method="post" action="../Controller/ReportController.php">
+    <label for="Category"> Category: </label>
 <select name="Category" id="categoryList" onchange="return subCategoryList();">
     <option value="category">Category</option>
     <?php
         for($i=0;$i<sizeof($categoryList);$i++){
-            echo '<option value='.$categoryList[$i]["Category_Id"].'>'.$categoryList[$i]["Category_Name"].'</option>';
+            echo '<option value='.$categoryList[$i]["Id"].'>'.$categoryList[$i]["Name"].'</option>';
         }
     ?>
 </select>
@@ -33,10 +34,25 @@ $categoryList=$reportService->categoryList();
 <div id="subCategory">
 
 </div>
+
 <br>
 <div id="brandList">
-
 </div>
+
+
+    <br>
+    Found Location: <input type="text" name="FoundLocation">
+    <br><br>
+    Found Date: <input type="date" name="FoundDate">
+    <br><br>
+    Item Title: <input type="text" name="ItemTitle">
+    <br><br>
+    Item Detail: <textarea name="ItemDescription" rows="5" cols="40"></textarea>
+    <br><br>
+    <input type="submit" value="submit" />
+
+</form>
+
 <br>
 </body>
 </html>
