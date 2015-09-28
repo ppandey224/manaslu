@@ -32,11 +32,16 @@ $categoryList=$reportService->categoryList();
 
 <br><br>
 <div id="subCategory">
-
+<select name="SubCategory" style="visibility: hidden;">
+    <option>Default</option>
+</select>
 </div>
 
 <br>
 <div id="brandList">
+    <select name="BrandList" style="visibility: hidden;">
+        <option>Default</option>
+    </select>
 </div>
 
 
