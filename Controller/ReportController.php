@@ -10,8 +10,12 @@ include "../CommonPage/includeAll.php";
 $category=$_POST["Category"];
 $category=new Category($category,"");
 $subcategory=$_POST["SubCategory"];
+if($subcategory === "Default")
+    $subcategory = "NULL";
 $subcategory=new SubCategory($subcategory, "");
 $brandId=$_POST["BrandList"];
+if($brandId === "Default")
+    $brandId = "NULL";
 $brand=new Brand($brandId,"");
 $location=$_POST["FoundLocation"];
 $date=$_POST["FoundDate"];
