@@ -12,17 +12,21 @@ include '../CommonPage/includeAll.php'
 	<link rel="stylesheet" href="../Resource/css/login.css">
 </head>
 <body onload="hideError()">
+
+<!-- The navigation header -->
 <header id="navigation_ribbon">
-	<a href="lostnfound.com"><p><span style="color: red">Lost</span> & <span style="color: 00bff3">Found</span></p></a>
+	<a href="../view/index.php"><p><span style="color: red">Lost</span> & <span style="color: 00bff3">Found</span></p></a>
 	<nav>
 		<ul>
-			<a href="reportlost.php"><li>Report lost</li></a>
-			<li>Report found</li>
+			<a href="report.php"><li id="firstLi">Report lost</li></a>
+			<a href="report.php"><li>Report found</li></a>
 			<li>Contacts</li>
 			<li>Help</li>
 		</ul>
 	</nav>
 </header>
+
+<!-- The Login and Signup fields box -->
 <div id="Login_signup_box">
 	<p>Login</p>
 	<form method="get" action="../Controller/UserController.php">
@@ -40,6 +44,8 @@ include '../CommonPage/includeAll.php'
 		<input id="signUp" type="submit" name="singUp" value="Signup"/>
 	</form>
 </div>
+
+<!-- The footer of the page -->
 <footer id = "page_footer">
 	<p>About us | Advertise | Help | Links | locations | Creators | Developers</p>
 </footer>
